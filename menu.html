@@ -1,231 +1,183 @@
-<!DOCTYPE html>
-<html>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hitaka</title>
-	
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<html lang="en">
 
-	<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restraunt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menu.css" />
 </head>
+<!DOCTYPE html>
 <body>
-	<!--header--->
-	<header>
-		<a href="#" class="logo">Hitaka</a>
-		<div class="bx bx-menu" id="menu-icon"></div>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <h1 class="logo">Hitaka</h1>
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">Eat Right Food</h1>
+            <p>Eat Healty, it is good for our health.</p>
+            <a href="index.html" class="btn btn-primary">Home</a>
+        </div>
+    </section >
+       
+ <section>
+    <div class="filter">
+        <button onclick="All()">All</button>
+        <button onclick="sushi()">sushi :</button>
+        <button onclick="salad()">salad :</button>
+    </div>  
+
+  
+            
+           
+ <div class="menubody">
+    <div class="cart">
+        <h3>cart</h3>
+        <div id="A">
+            <table>
+                <tr>
+                    <th>product</th>
+
+                    <th>price</th>
+                </tr>
+            </table>
+            <table id="e">
+               
 
 
 
+            </table>
+        </div>
+        <div id="B">
+            <h4>Total:</h4>
+            <h4 id="htotal"></h4>
+        </div>
+        <button onclick="validate()">valider</button>
+     </div>
+ 
+    <div class="cards">
+         
+        <div id="sushi1" class="card">
+            <button onclick="add('sn','snp')" type="button">ajouter</button>
+            <img src="./img/sushi nagiri.jpg"  alt="salad" width="200px"  height="200px" class="img2">
+            <h4 id="sn" style="font-size:20px;">
+            sushi nagiri<br> 
+            </h4>
         
-		<ul class="navbar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="menu.html">menu</a></li>
-			<li><a href="about.html">about</a></li>
-			<li><a href="contact.html">contact</a></li>
-		</ul>
-	</header>
+           <div style="display:flex;">
+            <h4 id="snp">7</h4>
+            <h4>$</h4>
+           </div>
 
-	<!--Home section--->
-	<section class="home" id="home">
-		<div class="home-text">
-			<p href="" style="color:white ;text-align: center; font-size: 0.9736666667cm;">Menu</p>
-		</div>
-	</section>
+        </div>
+        
+        <div id="sushi2" class="card">
+            <button onclick="add('sc','scp')" type="button">ajouter</button>
+         <img src="./img/sushi california.jpg"  alt="salad" width="200px"  height="200px" class="img2">
+         <h4 id="sc" style="font-size:20px;">
+            sushi california<br> 
+         </h4>
+         <div style="display:flex;">
+            <h4 id="scp">7</h4>
+            <h4>$</h4>
+         </div>
+        </div>
+       <div id="sushi3" class="card">
+          <button onclick="add('st','stp')" 
+           type="button">
+           ajouter
+           </button>
+         <img src="./img/shushi tartar.jpg"  alt="salad" width="200px"  height="200px" class="img2">
+          <h4 id="st" style="font-size:20px;">
+            sushi tartare <br> 
+           
+          </h4>
+          <div style="display:flex;">
+            <h4 id="stp">10</h4>
+            <h4>$</h4>
+          </div>
+       </div>
 
-   
-</div><section class="container">
-    <div class="text">
+       <div id="salad1" class="card">
+        <button onclick="add('sth','sthp')" 
+        type="button">
+         ajouter
+        </button>
+    
+       
+        <img src="./img/salad thon.jpg"  alt="salad" width="200px"  height="200px" class="img3">
+        <h4 id="sth" style="font-size:20px;">
+            salad thon
+            </h4>
+            <div style="display:flex;">
+                <h4 id="sthp">7</h4>
+                <h4>$</h4>
+            </div>
+       </div>
+           
+        <div id="salad2" class="card">
+            <button onclick="add('sac','sacp')" 
+        type="button">
+         ajouter
+        </button>
+        <img src="./img/salad1.jpg"  alt="" width="200px"  height="200px" class="img3">
+        <h4 id="sac" style="font-size:20px;">
+            salad california
+        </h4>
+        <div style="display:flex;">
+            <h4 id="sacp">8</h4>
+            <h4>$</h4>
+        </div>
+        </div>
+       <div  id="salad3" class="card">
+        <button onclick="add('sco','scop')" 
+        type="button">
+         ajouter
+        </button>
+        <img src="./img/salad corn.jpg"  alt="" width="200px"  height="200px" class="img3">
+        <h4 id="sco" style="font-size:20px;">
+            salad corn<br> 
+        </h4>
+        <div style="display:flex;">
+            <h4 id="scop">7</h4>
+            <h4>$</h4>
+        </div>
+       </div>
         
         
     </div>
-    <p href="" style="color:rgb(16, 15, 15) ;text-align: center; font-size: 0.9736666667cm;">MENU</p>
-	<div class="cart">
-		<h3>cart</h3>
-		<div id="A">
-			<table id="e">
-				<tr>
-					<th>product</th>
-
-					<th>price</th>
-				</tr>
-
-
-
-			</table>
-		</div>
-	    <div id="B">
-			<h4 id="htotal"></h4>
-		</div>
-	 </div>
-  
-
-
-
-<img src="./img/pexels-diego-pontes-2323398.jpg" width="200" height="200">
-<button id="togg1">-sushi :</button>
-
-<img src="./img/pexels-ronmar-lacamiento-806361.jpg" width="200" height="200"
-style="
-    margin-left: 4%;
-">
-<button id="togg2">-salad :</button>
-<div class="allo">
-	<div id="d1">
-		<p>
-		<img src="./img/pexels-diego-pontes-2323398.jpg" width="200" height="200">
-		<h4 id="sm"  style="font-size:20px;">
-			sushi mexid<br> 
-		</h4>
-		<div style="display:flex;">
-			<h4 id="smp">9</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('sm','smp')" class="sushi"
-		type="button">
-		 ajouter
-		</button>
-		<img src="./img/pexels-ivan-samkov-8951180.jpg"  alt="salad" width="200px"  height="200px" class="img2">
-		<h4 id="sn" style="font-size:20px;">
-			sushi nagiri<br> 
-			</h4>
-		</h4>
-		<div style="display:flex;">
-			<h4 id="snp">7</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('sn','snp')" class="sushi"
-		type="button">
-		 ajouter
-		</button>
-		<img src="./img/pexels-ryutaro-tsukata-6249501.jpg"  alt="salad" width="200px"  height="200px" class="img2">
-		<h4 id="sc" style="font-size:20px;">
-			sushi california<br> 
-		</h4>
-		<div style="display:flex;">
-			<h4 id="scp">7</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('sc','scp')" class="sushi"
-		type="button">
-		 ajouter
-		</button>
-		<img src="./img/pexels-horizon-content-3763808.jpg"  alt="salad" width="200px"  height="200px" class="img2">
-		<h4 id="st" style="font-size:20px;">
-			sushi tartare <br> 
-		   
-		</h4>
-		<div style="display:flex;">
-			<h4 id="stp">10</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('st','stp')" class="salad"
-		type="button">
-		 ajouter
-		</button>
-	</p>
-	</div>
-	<div id="d2">
-		<p>
-		<img src="./img/pexels-alesia-kozik-6544260.jpg"  alt="salad" width="200px"  height="200px" class="img3">
-		<h4 id="sth" style="font-size:20px;">
-			salad thon
-			</h4>
-			<div style="display:flex;">
-				<h4 id="sthp">7</h4>
-				<h4>$</h4>
-			</div>
-			<button onclick="add('sth','sthp')" class="salad"
-			type="button">
-			 ajouter
-			</button>
-			
-		<img src="./img/pexels-foodie-factor-566566.jpg"  alt="" width="200px"  height="200px" class="img3">
-		<h4 id="se" style="font-size:20px;">
-			salad egg
-		</h4>
-		<div style="display:flex;">
-			<h4 id="sep">4</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('se','sep')" class="salad"
-		type="button">
-		 ajouter
-		</button>
-		<img src="./img/pexels-rachel-claire-5490897.jpg"  alt="" width="200px"  height="200px" class="img3">
-		<h4 id="sac" style="font-size:20px;">
-			salad california
-		</h4>
-		<div style="display:flex;">
-			<h4 id="sacp">8</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('sac','sacp')" class="salad"
-		type="button">
-		 ajouter
-		</button>
-		<img src="./img/pexels-sydney-troxell-718743.jpg"  alt="" width="200px"  height="200px" class="img3">
-		<h4 id="sco" style="font-size:20px;">
-			salad corn<br> 
-		</h4>
-		<div style="display:flex;">
-			<h4 id="scop">7</h4>
-			<h4>$</h4>
-		</div>
-		<button onclick="add('sco','scop')" class="salad"
-		type="button">
-		 ajouter
-		</button>
-		</p>
-	</div>
-	</div>
+    </div>
 
 </div>
+</div>
+    </div>
+</div>
 
-	
-	<footer>
-        <div class="footer-wrapper">
-            <div class="column">
-                <p class="footer-title">Support</p>
-                <ul>
-                    <li>About Us</li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy policy</li>
-                    <li>Help</li>
-                </ul>
-            </div>
-            <div class="column">
-                <p class="footer-title">Contact Info</p>
-                <p class="address">
-                    shibuya tokyo japan
-                    info@hitaki.com
-                    +(245)-123-1234
-                </p>
-            </div>
-            <div class="list">
-				<h4>Connect</h4>
-				<div class="social">
-					<a href="#"><i class='bx bxl-facebook' ></i></a>
-					<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-					<a href="#"><i class='bx bxl-twitter' ></i></a>
-					<a href="#"><i class='bx bxl-linkedin' ></i></a>
-				</div>
-			</div>
-
-        </div>
+    <footer id="footer">
+        <h2>Hitaka &copy; all rights reserved</h2>
 
     </footer>
+   
 
-			
-			
-			
-	<script type="text/javascript" src="js/script.js"></script>
-			
-	
-</body>
-</html>  
+
+ </body>
+    
+    <script src="./js/script.js"></script>
